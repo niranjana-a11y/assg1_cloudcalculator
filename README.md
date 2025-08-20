@@ -7,6 +7,7 @@ Finally it has a bill button that shows the details of all the resources that ha
 
 ## Table of Contents
 
+- [Features](##features)
 - [Installation](##installation)
 - [Folder Structure](##folder_structure)
 - [Possible Errors](##possible_errors)
