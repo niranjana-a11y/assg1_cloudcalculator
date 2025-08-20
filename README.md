@@ -10,7 +10,7 @@ Finally it has a bill button that shows the details of all the resources that ha
 - [Installation](##installation)
 - [Folder Structure](##folder_structure)
 - [Possible Errors](##possible_errors)
-- 
+
 ## Installation
 
 Instructions on how to install and set up the project locally.
@@ -70,13 +70,8 @@ Use DBeaver or psql to create a database:
 ```
 CREATE DATABASE cloud_calculator;
 ```
-🔹 Step 2: Import SQL Data
-In DBeaver:
-Open your PostgreSQL connection.
-Open SQL Editor.
-Run the file: init_data.sql
-This creates adds sample data into two tables: region_prices and resource_prices, and .
-🔹 Step 3: Configure Spring Boot to Connect to DB
+<br>
+🔹 Step 2: Configure Spring Boot to Connect to DB
 In backend/src/main/resources/application.properties :
 
 ```
@@ -85,8 +80,17 @@ spring.datasource.username=your_pg_username
 spring.datasource.password=your_pg_password
 ```
 Replace your_pg_username and your_pg_password with your actual PostgreSQL credentials.
-
-After creating the database and entering entries into table, change create into update backend/src/main/resources/application.properties :
+<br>
+<br>
+🔹 Step 3: Import SQL Data
+In DBeaver:
+Open your PostgreSQL connection.
+Open SQL Editor.
+Run the file: init_data.sql
+This adds sample data into two tables: region_prices and resource_prices
+<br>
+<br>
+🔹 Step 4: After creating the database and entering entries into table, change create into update backend/src/main/resources/application.properties :
 
 ```
 spring.jpa.hibernate.ddl-auto=update 
@@ -106,7 +110,7 @@ my-project-repo/
                 └── services/
                 └── Assg1Application.java
             └── resources
-                └── pplication.properties
+                └── Application.properties
         └── pom.xml
 └── frontend/  ← contains a copy of FrontendApp
     └── public/
@@ -129,6 +133,6 @@ my-project-repo/
 ```
 spring.jpa.hibernate.ddl-auto=update
 ```
-3. If the database is empty. Run init_data.sql to insert values. take liberty to enter any value that you like.
+3. If the database is empty. Run init_data.sql to insert values. Take liberty to enter any value that you like.
 4. If the database credentials are not set up according your database account
 5. vite version not compatible with node version 18.20.2. Then download compatible vite
