@@ -79,11 +79,17 @@ This creates adds sample data into two tables: region_prices and resource_prices
 In backend/src/main/resources/application.properties :
 
 ```
+spring.datasource.url=jdbc:postgresql://localhost:5432/your_database
 spring.datasource.username=your_pg_username
 spring.datasource.password=your_pg_password
 ```
 Replace your_pg_username and your_pg_password with your actual PostgreSQL credentials.
 
+After creating the database and entering entries into table, change create into update backend/src/main/resources/application.properties :
+
+```
+spring.jpa.hibernate.ddl-auto=create 
+```
 ## Folder Structure
 ```
 my-project-repo/
