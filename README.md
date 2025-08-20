@@ -9,7 +9,8 @@ Finally it has a bill button that shows the details of all the resources that ha
 
 - [Installation](##installation)
 - [Folder Structure](##folder_structure)
-
+- [Possible Errors](##possible_errors)
+- 
 ## Installation
 
 Instructions on how to install and set up the project locally.
@@ -88,7 +89,7 @@ Replace your_pg_username and your_pg_password with your actual PostgreSQL creden
 After creating the database and entering entries into table, change create into update backend/src/main/resources/application.properties :
 
 ```
-spring.jpa.hibernate.ddl-auto=create 
+spring.jpa.hibernate.ddl-auto=update 
 ```
 ## Folder Structure
 ```
@@ -118,4 +119,16 @@ my-project-repo/
             └── CalculateBox.jsx
             └── CalculateBox.css
             └── main.jsx
-└── init_data.sql/ 
+└── init_data.sql/
+
+```
+
+## Possible Errors
+1. If 5173 port is already in use. Frontend only works in that port
+2. change create into update in backend/src/main/resources/application.properties 
+```
+spring.jpa.hibernate.ddl-auto=update
+```
+3. If the database is empty. Run init_data.sql to insert values. take liberty to enter any value that you like.
+4. If the database credentials are not set up according your database account
+5. vite version not compatible with node version 18.20.2. Then download compatible vite
