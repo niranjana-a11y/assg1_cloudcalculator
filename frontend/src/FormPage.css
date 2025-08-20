@@ -1,0 +1,244 @@
+@keyframes bgMove {
+  0% {
+    background-position: 
+      10% 20%, 90% 30%, 50% 120%, 10% 60%, 70% 70%, 40% 10%, 90% 90%;
+  }
+  100% {
+    background-position: 
+      80% 20%, 10% 30%, 90% 120%, 90% 60%, 20% 70%, 60% 10%, 50% 90%;
+  }
+}
+
+.form-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 170vh;
+    background-color: #a6dbfa;
+     /* #c4e5fa; */
+    padding: 20px;
+     background-image: 
+    url('/bg-icon.png'),
+    url('/bg-icon.png'),
+    url('/bg-icon.png'),
+    url('/bg-icon.png'),
+    url('/bg-icon.png'),
+    url('/bg-icon.png'),
+    url('/bg-icon.png');
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: 
+    10% 10%,   /* top left */
+    80% 30%,   /* top right */
+    80% 140%,   /* bottom center */
+    20% 60%,   /* left middle */
+    70% 70%,   /* right lower */
+    40% 10%,  /* upper center */
+    50% 95%;    
+  background-size: 
+    150px 150px,  /* large */
+    200px 200px,  /* larger */
+    160px 160px,    /* small */
+    110px 110px,    /* medium */
+    160px 160px,  /* medium-large */
+    100px 100px,
+    180px 180px;    /* medium */
+  animation: bgMove 16s linear infinite alternate;
+}
+
+.title{
+    display: flex;
+    justify-content: center; 
+    color: #343c7c;
+    font-size: 2em;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    font:  sans-serif;
+}
+
+.formDiv{
+    gap: 10px;
+    background-color: #f0f8ff;
+    padding: 80px;
+    width: 300px;
+    box-shadow: 0 0 100px white;
+    border-radius: 20px;
+}
+
+.formText{
+    display: block;
+    color: #838cd3;
+    gap: 10px;
+    font-size: 1.2em;
+}
+
+.selectOption{
+    background-color: #f0f8ff;
+    width: 100%;
+    border-radius: 0%;
+    color: #1e3edc;
+    padding: 10px;
+    border-color: #e3e6e9;
+}
+
+.count{
+    border: 1px solid #ccc;
+    width: 93%;
+    border-radius: 0%;
+    color: #1e3edc;
+    padding: 10px; 
+    background-color: #f0f8ff; 
+    border-color: #e3e6e9;
+}
+
+.next {
+    background-color: #f0f8ff;
+    color: #1e3edc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 300ms, transform 300ms;
+}
+
+.submitButton {
+   display: block;
+  margin: 25px auto 0;
+  background-color: #7cb5e7;
+  color: #101111;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:  #b7d0e5 300ms, transform 300ms;
+}
+
+.submitButton:hover {
+  background-color: #b9dcf8;
+  transform: scale(1.05);
+}
+
+.costMessage{
+    color: #343c7c;
+    font-size: 1em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.editnextcontainer {
+    display: flex;
+    justify-content: space-between; /* pushes them apart */
+    width: 100%;
+}
+
+.editButton,.billButton {
+    background-color: #f0f8ff;
+    color: #1e3edc;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 300ms, transform 300ms;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+    color: #101111;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  min-width: 400px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.breakdown-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+.breakdown-table th,
+.breakdown-table td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.breakdown-table th {
+  background-color: #f4f4f4;
+}
+
+.priceLabel {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  color: blue;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.pricePopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5); /* overlay effect */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pricePopup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  overflow-y: auto;
+  width: 180px;
+  max-height: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+
+.pricePopup table th,
+.pricePopup table td {
+  color: #101111;
+  background-color: #c0c7ce;
+    padding: 8px 12px;
+}
+
+.pricePopup table th{
+    background-color: #f4f4f4;
+    color: #101111;
+}
+
+.selectResourcePrice{
+    background-color: #616364;
+    border-radius: 0%;
+    color: #e3e4ea;
+    padding: 10px;
+}
+
+.pricePopupHeading{
+    color: #c2f1f1;
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 0px;
+    /* text-shadow: 
+             -1px -1px 0 rgb(72, 71, 71),  
+              1px -1px 0 rgb(72, 71, 71),
+             -1px  1px 0 rgb(72, 71, 71),
+              1px  1px 0 rgb(72, 71, 71); */
+}

@@ -1,0 +1,24 @@
+.calculateBox{
+  background-color: rgb(175, 207, 241);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+  height: 100vh;  
+  width: 180vh;          /* full screen height */
+  flex-direction: column;
+}
+
+.heading{
+    color: #646cffaa;
+    text-shadow: #646cffaa;
+}
+
+.calculateButton {
+  background-color: aliceblue;
+  color: #101111;
+  transition: filter 300ms;
+}
+.calculateButton:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
