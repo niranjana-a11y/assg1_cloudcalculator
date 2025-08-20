@@ -11,6 +11,17 @@ Finally it has a bill button that shows the details of all the resources that ha
 - [Folder Structure](##folder_structure)
 - [Possible Errors](##possible_errors)
 
+## Features
+
+- Estimate cloud resource costs based on region, type, and count.
+- Compare prices of each resource across different regions.
+- Fetch available regions dynamically (from backend).
+- Fetch resources for selected region dynamically.
+- Delete unwanted resource from resource list.
+- Add as many different resources and as many counts of a resource.
+- See detailed cost breakdowns and checkout prices for resources.
+- Responsive and modern UI.
+
 ## Installation
 
 Instructions on how to install and set up the project locally.
